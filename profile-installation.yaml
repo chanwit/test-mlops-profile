@@ -1,0 +1,11 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileInstallation
+metadata:
+  name: mlops-profile
+  namespace: profiles-system
+spec:
+  source:
+    branch: main
+    path: mlops
+    url: https://github.com/chanwit/mlops-profile
+status: {}
