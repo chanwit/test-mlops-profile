@@ -1,0 +1,12 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    weave-gitops.weave.works/app-identifier: wego-3120535c223a968d8f82c7f8b8d991d3
+  name: test-mlops-profile
+  namespace: wego-system
+spec:
+  deployment_type: kustomize
+  path: ./
+  url: ssh://git@github.com/chanwit/test-mlops-profile.git
