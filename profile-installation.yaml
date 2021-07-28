@@ -3,7 +3,7 @@ kind: ProfileInstallation
 metadata:
   creationTimestamp: null
   name: mlops-profile
-  namespace: profiles-system
+  namespace: kubeflow
 spec:
   gitRepository:
     name: test-mlops-profile

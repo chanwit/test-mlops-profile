@@ -3,11 +3,11 @@ kind: Kustomization
 metadata:
   creationTimestamp: null
   name: mlops-profile-mlops-kfp
-  namespace: profiles-system
+  namespace: kubeflow
 spec:
   dependsOn:
   - name: mlops-profile-mlops-kfp-cluster-scoped
-    namespace: profiles-system
+    namespace: kubeflow
   interval: 5m0s
   path: artifacts/kfp/kfp
   prune: true
@@ -15,5 +15,5 @@ spec:
     kind: GitRepository
     name: test-mlops-profile
     namespace: wego-system
-  targetNamespace: profiles-system
+  targetNamespace: kubeflow
 status: {}
