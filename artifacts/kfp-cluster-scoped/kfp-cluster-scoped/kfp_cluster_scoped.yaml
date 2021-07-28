@@ -214,13 +214,18 @@ spec:
   group: app.k8s.io
   names:
     kind: Application
+    listKind: ApplicationList
     plural: applications
+    singular: application
   scope: Namespaced
   versions: 
   - name: v1beta1
     schema:
       openAPIV3Schema:
-        type: object        
+        type: object
+        required:
+        - metadata
+        - spec        
         properties:
           apiVersion:
             type: string
