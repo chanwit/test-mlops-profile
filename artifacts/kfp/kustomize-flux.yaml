@@ -1,0 +1,19 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  creationTimestamp: null
+  name: mlops-profile-mlops-kfp
+  namespace: profiles-system
+spec:
+  dependsOn:
+  - name: mlops-profile-mlops-kfp-cluster-scoped
+    namespace: profiles-system
+  interval: 5m0s
+  path: artifacts/kfp/kfp
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: test-mlops-profile
+    namespace: wego-system
+  targetNamespace: profiles-system
+status: {}

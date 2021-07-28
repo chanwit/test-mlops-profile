@@ -1,0 +1,15 @@
+apiVersion: weave.works/v1alpha1
+kind: ProfileInstallation
+metadata:
+  creationTimestamp: null
+  name: mlops-profile
+  namespace: profiles-system
+spec:
+  gitRepository:
+    name: test-mlops-profile
+    namespace: wego-system
+  source:
+    branch: main
+    path: .
+    url: https://github.com/chanwit/mlops-profile
+status: {}
