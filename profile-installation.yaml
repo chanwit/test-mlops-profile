@@ -1,14 +1,9 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: kubeflow
----
 apiVersion: weave.works/v1alpha1
 kind: ProfileInstallation
 metadata:
   creationTimestamp: null
   name: mlops-profile
-  namespace: kubeflow
+  namespace: profiles-system
 spec:
   gitRepository:
     name: test-mlops-profile
